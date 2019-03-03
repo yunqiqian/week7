@@ -67,6 +67,7 @@ p{
 img{
   max-width: 100%;
 }
+
 /*====================================
 	HEADER STYLES
 ====================================*/
@@ -174,6 +175,7 @@ header {
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   position:relative;
+  z-index: -1;
 }
 
 
@@ -187,7 +189,10 @@ header {
   transform: translate(-50%, -50%);
   color:#fff;
 }
-
+/*
+.firstsection{
+  margin-top: 50em;
+} */
 /*====================================
   FORMS STYLES
 ====================================*/
@@ -235,7 +240,7 @@ input[type=submit]:hover {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
-  width:80%;
+  width:95%;
   margin: 0 auto;
 }
 
