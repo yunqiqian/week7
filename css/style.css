@@ -1,0 +1,432 @@
+#skip a
+{
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+
+#skip a:focus
+{
+position:static;
+width:auto;
+height:auto;
+background: darkblue;
+}
+
+* {
+    box-sizing: border-box;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+/*====================================
+	BASE STYLES
+====================================*/
+
+body {
+  background: #122A36;
+  min-height: 100vh;
+  }
+
+
+* {
+  font-family: 'Lato', sans-serif;
+  font-size: 10px;
+  color:#fff;
+}
+
+h1{
+  font-size: 5em;
+}
+
+h2{
+  font-size: 3em;
+}
+
+h3{
+  font-size: 2.5em;
+}
+
+h4{
+  font-size: 2em;
+}
+
+h5{
+  font-size: 2em;
+}
+
+p{
+  font-size: 1.5em;
+}
+
+img{
+  max-width: 100%;
+}
+/*====================================
+	HEADER STYLES
+====================================*/
+header {
+  background: #eeeeee;
+  box-shadow: 0px -3px 15px 2px;
+  }
+
+.header-container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column; /* Logo starts stacked on top of nav */
+  align-items: center;
+}
+
+.logo {
+  max-width: 100px;
+  max-height: 100px;
+  margin-top: 30px;
+}
+
+
+/*====================================
+  MENU STYLES
+====================================*/
+
+.main-menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;  /* Space for logo */
+  overflow: visible;
+
+  max-width: 700px;  /* Keeps the buttons getting too far from each other on largest screens */
+}
+
+.main-menu a {
+    width: 100%;
+    text-align: center;
+    padding: .75em 1em;
+    display: block;
+    color: #222;
+    border-bottom: 1px solid #ccc;
+}
+
+.main-menu a:hover {
+      color: #122A36;
+      border-bottom-color: #122A36;
+}
+
+/*====================================
+  DROPDOWN MENU STYLES
+====================================*/
+
+/* The hidden-at-first drop menus */
+.drop-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Allows sub buttons to stretch across button width in main-menu*/
+  transition: max-height .4s, opacity .3s;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden; /* Keeps links in drop menu from displaying until height is large enough */
+}
+
+
+.drop-menu > .menu-button {
+  height: 100%;
+  transition: transform .4s;
+  transform: translateY(-300%);
+  background: #bbb; /* Makes the menu effects visible on close */
+}
+
+/* Makes for easy identifying when the drop menu is open */
+.dropdown-wrapper:hover > .menu-button {
+  color: #fff;
+  background: #122A36;
+}
+
+/* The dropdown-wrapper wraps both the .main-menu button and drop down menu */
+/* Expands .drop-menu to children height, not setting an expicit height allows variable # of buttons */
+.dropdown-wrapper:hover .drop-menu{
+  max-height: 300px;
+  opacity: 1;
+}
+
+/* The specifity keeps styles from affecting main menu button */
+.dropdown-wrapper:hover > .drop-menu .menu-button {
+  transform: translateY(0%);
+}
+
+
+/*====================================
+  ABOUT PAGE STYLES
+====================================*/
+
+.heroimage{
+  background-image: url("../images/about.jpg"); /* The image used */
+  background-color: #122A36; /* Used if the image is unavailable */
+  height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  position:relative;
+}
+
+
+.herotext {
+  background: rgba(0, 0, 0, 0.6);
+  padding:4em;
+  text-align:center;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  color:#fff;
+}
+
+/*====================================
+  FORMS STYLES
+====================================*/
+.formcontainer h2, .formcontainer p, label{
+  color: #122A36;
+}
+
+.formcontainer p{
+  margin-bottom: 20px;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 20px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.formcontainer {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width:80%;
+  margin: 0 auto;
+}
+
+.col-25, .col-75, input[type=submit] {
+  float: left;
+  width: 100%;
+}
+
+#subject{
+  height:200px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*====================================
+	GALLERY STYLES
+====================================*/
+.container > h1{
+  text-align: center;
+  padding-top:1em;
+  padding-bottom: 0.5em;
+}
+
+.galleryitems{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.galleryitems .gallery{
+  margin: 3em 0em 3em 0em;
+	box-shadow: 0.3em 0.4em 0.4em rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+  text-align: center;
+}
+
+.galleryitems .gallery img{
+  display: block;
+  width: 100em;
+  height: auto;
+  object-fit: cover;
+  transition: transform 400ms ease-out;
+  /* background: url(blah.jpg) 50% 50% no-repeat; /* 50% 50% centers image in div */ */
+}
+
+.galleryitems .gallery img:hover {
+  opacity: .5;
+  cursor: pointer;
+
+}
+
+.galleryitems .gallery h2{
+  background-color: #24536c;
+  padding-top: 1em;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+ .galleryitems .gallery h3{
+  background-color: #24536c;
+  padding-top: 0.5em;
+  padding-bottom: 1.7em;
+  font-size: 1em;
+ }
+
+/*====================================
+  MEDIA QUERIES
+====================================*/
+
+@media (min-width: 700px) {
+
+
+/*====================================
+  DROP-MENU EFFECTS (LARGER SCREENS)
+====================================*/
+/* Resets dropdown styles to not affect the effects. Overflow still set to hidden allows for menu effects like sliding in */
+  .effect {
+    transition: max-height 0s;
+    opacity: 1;
+    background: transparent;
+  }
+  .effect .menu-button {
+    transform: translateY(0%);
+  }
+
+  .fade-in .menu-button {
+    transition: opacity .5s;
+    opacity: 0;
+  }
+  .dropdown-wrapper:hover .fade-in .menu-button {
+    opacity: 1;
+  }
+
+
+
+  .header-container {
+    width: 90%;
+  }
+
+  .header-container {
+    height: 200px;
+    justify-content: space-between; /* Pushes logo to top, nav bar all the way down */
+  }
+
+  .main-menu {
+    flex-direction: row; /* Horizontal main menu buttons */
+    align-items: flex-start; /* Makes the top of the 'dropdown-wrapper' div stay flush with button top because it's aligned on the cross-axis */
+    height: 50px; /* Setting the height allows the dropdown outside of it's parent's bounds, therefore not compensated for by the flex. */
+    margin: 0;
+  }
+
+  .main-menu > .menu-button {
+    width: 23%;
+    max-width: 150px;
+  }
+
+  .logo {
+    max-width: 100px;
+    max-height: 100px;
+    margin-top: 30px;
+  }
+
+  /*====================================
+    FORMS STYLES
+  ====================================*/
+
+  .col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+  }
+
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+
+  /*====================================
+  	GALLERY STYLES
+  ====================================*/
+
+  .galleryitems{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .galleryitems .gallery{
+    width: 40%;
+  }
+
+
+}
+
+
+
+
+@media (min-width: 1200px) {
+
+  .header-container {
+    flex-direction: row; /* Places logo on the same line as .main-menu */
+    justify-content: space-around;
+    height: 160px;
+	}
+
+  .main-menu {
+ 		width: 60%;
+  	justify-content: space-between;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  /*====================================
+  	GALLERY STYLES
+  ====================================*/
+
+  .galleryitems{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .galleryitems .gallery{
+    width: 28%;
+  }
+
+
+}

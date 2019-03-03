@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <title>About</title>
+  </head>
+  <body>
+    <header role="banner">
+      <div id="skip"><a href="#content">Skip to Main Content</a></div>
+      <div class="header-container">
+	      <a  href="index.html"><img class="logo" src="images/branding.png" alt="personal logo" ></a>
+        <nav class="main-menu" role="navigation">
+          <div class="dropdown-wrapper menu-button">
+            <a class="menu-button" href="index.html">About</a>
+            <div class="drop-menu fade-in effect">
+              <a class="menu-button" href="#content">Recent Works</a>
+              <a class="menu-button" href="#professional">Experience</a>
+              <a class="menu-button" href="#contact">Contact</a>
+  					</div>
+  				</div>
+        	<a class="menu-button" href="gallery.html">Gallery</a>
+        	<a class="menu-button" href="portfolio_01.html">Project Catcha</a>
+        	<a class="menu-button" href="portfolio_02.html">IA Evaluation</a>
+  			</nav>
+			</div>
+    </header>
+    <main role="main">
+      <div class="heroimage">
+        <div class="herotext">
+          <h1><i class="fas fa-child" aria-label="A waving figure icon"></i>Hi! I'm Yunqi</h1>
+          <h2>UX Designer &amp; Researcher</h2>
+          <p>I'm a passionate UI/UX designer who combines the professional experience in web design and the academic background in user-centered research. </p>
+          <a href="docs/resume_yunqi_qian.pdf">Download Resume</a>
+        </div>
+      <img src="images/about.jpg" alt="Picture of Me Drawing">
+      </div>
+      <h3 id="content">01 Portfolio</h3>
+      <h4>My Latest Work <a href="gallery.html">SEE MORE &gt;</a></h4>
+
+      <article class="gallery">
+        <a href="portfolio_01.html">
+          <img src="images/gallery_01_catcha.gif" alt="Catcha Application Overview">
+        </a>
+        <h5>Catcha</h5>
+        <h6>UI/UX Design | Self-initiated Application</h6>
+      </article>
+      <article class="gallery">
+        <a href="portfolio_02.html">
+          <img src="images/gallery_02_governmentwebsite.png" alt="City of Fort Myers Logo">
+        </a>
+        <h5>Government Website Redesign</h5>
+        <h6>UI/UX Research | Website IA Consulting</h6>
+      </article>
+      <article class="gallery">
+        <a href="portfolio_03.html">
+          <img src="images/gallery_03_GLOS.png" alt="Great Lakes Observing System Logo">
+        </a>
+        <h5>Non-profit Environmental Data Portal</h5>
+        <h6>UI/UX Research | Consulting Contextual Inquiry</h6>
+      </article>
+
+      <h3 id="professional">02 Professional</h3>
+      <h4>My MY KNOWLEDGE LEVEL IN SOFTWARE</h4>
+      <ol>
+        <li>Adobe XD</li>
+        <li>Sketch</li>
+        <li>Principle</li>
+        <li>Photoshop</li>
+        <li>illustrator</li>
+        <li>HTML/CSS</li>
+        <li>Javascript</li>
+        <li>Python</li>
+        <li>SQL</li>
+      </ol>
+      <h3 id="experience">03 Experience</h3>
+
+      <article class="experience">
+        <p class="year">2014-2016</p>
+        <h4>SMARTERTRAVEL</h4>
+        <h5>Web Designer</h5>
+        <p class="job_description">Initiated UI tests (A/B tests) by creating webpage wireframes and email templates using Adobe XD to drive potential traffic to the intended lander and achieve revenue purposes.</p>
+      </article>
+      <article class="experience">
+        <p class="year">2015-2017</p>
+        <h4>DIEU' DONO CO.</h4>
+        <h5>Chief Designer</h5>
+        <p class="job_description">Reestablished brand's marketing goals with research group by refreshing branding system and website interface.</p>
+      </article>
+      <article class="experience">
+        <p class="year">2015-2015</p>
+        <h4>KEL&PARTNERS</h4>
+        <h5>Social Media Graphic Designer</h5>
+        <p class="job_description">Designed graphic templates using Photoshop and Illustrator for clients' social media platforms to increase social buzz and total visiting traffic to their websites.</p>
+      </article>
+
+      <section>
+
+        <div class="formcontainer">
+          <form method="POST" action="https://formspree.io/yuki.qian9@gmail.com">
+            <h2>Contact</h2>
+            <p>Feel free to send me a message and connect!</p>
+            <div class="row">
+              <div class="col-25">
+                <label for="fname">Name</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="email">Email</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="email" name="email" placeholder="Your last name..">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="subject">Subject</label>
+              </div>
+              <div class="col-75">
+                <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <input type="submit" value="Submit">
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer role="contentinfo">
+      &copy; 2018 by Yunqi Qian<br>
+      <a href="http://yunqiqian.com"> Yunqi Qian's Portfolio Site</a>
+    </footer>
+  </body>
+</html>
